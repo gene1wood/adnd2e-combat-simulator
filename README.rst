@@ -1,3 +1,11 @@
+Summary
+=======
+
+The AD&D Second edition Combat Simulator will run simple simulated battles to
+determine the statistical likelyhood of success or failure by the party. The
+simulator does not account for player creativity and uses a very simple method
+to determine how the battle will go.
+
 Configuration
 =============
 
