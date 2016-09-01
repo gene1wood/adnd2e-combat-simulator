@@ -1,0 +1,158 @@
+---
+players:
+  Taier:
+    level: 7
+    hp: 12
+    ac:
+      armor: 4 # armor spell
+      ring_of_protection: 1
+    thac0: 18
+    attack:
+      - magic missile
+    attacks:
+      - name: magic missile
+        damage: 4d4 + 4
+        tohit:
+          magic: 20
+      - name: composite long bow sheaf
+        rof: 2/1
+        damage:
+          sm: 1d8
+          l: 1d8
+          str: 1
+#      - name: hand crossbow hand quarrel
+#        thac0: 16
+#        damage:
+#          sm: 1d3
+#          l: 1d2
+  Gwen:
+    level: 7
+    hp: 27
+    ac:
+      armor: 5 # studded leather
+      dex: 3
+      shield: 3 # buckler +2
+    thac0: 14
+    attack:
+      - shadowsteel rapier + 1
+    attacks:
+      - name: shadowsteel rapier + 1
+        tohit:
+          magic: 1
+          # magic: 2 # vs Tiny or Small
+        damage:
+          sm: 1d6 + 1
+          l: 1d8 + 1
+          magic: 1
+          # magic: 2 # vs Tiny or Small
+  Armen:
+    level: 6
+    hp: 32
+    ac:
+      armor: 3 # studded leather
+      shield: 1
+      kit: 2
+    thac0: 15
+    attack:
+      - rapier + 1
+    attacks:
+      - name: rapier + 1
+        tohit:
+          elf: 1
+          specialization: 1
+          magic: 1
+        damage:
+          sm: 1d6 + 1
+          l: 1d8 + 1
+          specialization: 2
+          magic: 1
+        rof: 3/2
+      - name: sabre
+        tohit:
+          elf: 1 #not sure where this +1 comes from?
+        damage:
+          sm: 1d6 + 1
+          l: 1d8 + 1
+      - name: stilleto
+        tohit:
+          elf: 1 #not sure where this +1 comes from
+        damage:
+          sm: 1d3
+          l: 1d2
+        rof: 2/1
+      - name: composite short bow
+        damage:
+          sml: 1d6
+        rof: 2/1
+  Shakas:
+    level: 6
+    hp: 24
+    ac:
+      armor: 6 # splint mail
+      shield: 1
+    thac0: 18
+    attack:
+      - morning star
+    attacks:
+      - name: morning star
+        damage:
+          sm: 2d4
+          l: 1d6 + 1
+  Leah:
+    level: 3 #or 4?
+    hp: 17
+    ac:
+      armor: 4
+    thac0: 19
+    attack:
+      - shadow stiletto
+    attacks:
+      - name: shadow stiletto
+        damage:
+          sm: 1d3
+          l: 1d2
+monsters:
+  Owlbear:
+    qty: 2
+    hd: 5 + 2
+    ac: 5
+    thac0: 15
+    attack:
+      - claw
+      - claw
+      - bite
+    attacks:
+      - name: claw
+        damage: 1d6
+      - name: bite
+        damage: 2d6
+  Kobold_with_dagger:
+    qty: 0
+    hd: 1d4
+    ac: 7
+    thac0: 20
+    attack:
+      - dagger
+    attacks:
+      - name: dagger
+        damage: 1d4
+  Kobold_with_sword:
+    qty: 4
+    hd: 1d4
+    ac: 7
+    thac0: 20
+    attack:
+      - sword
+    attacks:
+      - name: sword
+        damage: 1d6
+  Pirates:
+    qty: 8
+    hd: 1d6
+    ac: 7
+    thac0: 20
+    attack:
+      - scimitar
+    attacks:
+      - name: scimitar
+        damage: 1d8
