@@ -13,7 +13,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='adnd2e-combat-simulator',
-    version='1.0.0',
+    version='1.0.1',
 
     description='A tool to simulate combat in AD&D 2nd Edition',
     long_description=long_description,
