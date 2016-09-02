@@ -14,8 +14,13 @@ class Manager:
         self.SIZES = ['sm', 'l']
 
     def load_combatants(self):
-        with open('combatants.yaml') as f:
-            combatants = yaml.load(f)
+        try:
+            with open('combatants.yaml') as f:
+                combatants = yaml.load(f)
+        except IOError:
+            print("Missing combatants.yaml file")
+            print("Make sure to configure your combatants first.")
+            exit(1)
 
         players = combatants['players']
         monsters = combatants['monsters']
@@ -141,10 +146,7 @@ class Manager:
                    tohit))
         return sum(damages)
 
-    def do_battle(self):
-
-        players, monsters = self.load_combatants()
-        # living_players, living_monsters = players, monsters
+    def do_battle(self, players, monsters):
         print("%s vs %s" % (players.keys(), monsters.keys()))
 
         rnd = 0
@@ -180,10 +182,11 @@ class Manager:
         return ('players' if len(players) > 0 else 'monsters'), rnd
 
     def do_war(self, battles):
+        players, monsters = self.load_combatants()
         results = {'players': 0, 'monsters': 0}
         rounds_list = []
         for i in range(0, battles):
-            winner, rounds = self.do_battle()
+            winner, rounds = self.do_battle(players, monsters)
             results[winner] += 1
             rounds_list.append(rounds)
         print("######################")
