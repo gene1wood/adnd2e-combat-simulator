@@ -13,11 +13,11 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='adnd2e-combat-simulator',
-    version='1.0.1',
+    version='1.0.2',
 
     description='A tool to simulate combat in AD&D 2nd Edition',
     long_description=long_description,
-    url='https://github.com/pypa/adnd2e-combat-simulator',
+    url='https://github.com/gene1wood/adnd2e-combat-simulator',
     author='Gene Wood',
     author_email='gene_wood@cementhorizon.com',
     license='GPL-3.0',

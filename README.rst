@@ -6,6 +6,22 @@ determine the statistical likelyhood of success or failure by the party. The
 simulator does not account for player creativity and uses a very simple method
 to determine how the battle will go.
 
+Usage
+=====
+
+First create a `combatants.yaml` file with the players and monsters
+information. The example combatants.example.yaml_ file included in the package
+is a good place to start.
+
+Next simulate the war
+
+::
+
+    battle [BATTLES]
+
+The BATTLES argument indicates how many times to simulate the battle. Default
+is 1.
+
 Configuration
 =============
 
@@ -68,14 +84,4 @@ which is the number of 1d8 dice to roll to determine the monsters hit points,
 or it can be a traditional Hit Die number with a modifier (e.g. 3 + 2), or it
 can just be a description of dice and modifiers (e.g. 1d6 + 2 or 2d8)
 
-Usage
-=====
-
-To simulate the war
-
-::
-
-    battle [BATTLES]
-
-The BATTLES argument indicates how many times to simulate the battle. Default
-is 1.
+.. _combatants.example.yaml: https://github.com/gene1wood/adnd2e-combat-simulator/blob/master/adnd2e_combat_simulator/combatants.example.yaml
