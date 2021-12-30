@@ -16,7 +16,7 @@ class Manager:
     def load_combatants(self):
         try:
             with open('combatants.yaml') as f:
-                combatants = yaml.load(f)
+                combatants = yaml.safe_load(f)
         except IOError:
             print("Missing combatants.yaml file")
             print("Make sure to configure your combatants first.")
@@ -164,7 +164,7 @@ class Manager:
                                          (monsters, players)]:
                 for attacker in attackers:
                     if len(defenders) > 0:
-                        defender = random.choice(defenders.keys())
+                        defender = random.choice(list(defenders.keys()))
                         damage = self.fight(attackers,
                                             attacker,
                                             defenders,
